@@ -1,6 +1,6 @@
-const authController = require('./controller/Authcontroller')
-const songController = require('./controller/SongController')
-const stockController = require('./controller/StockController')
+const authController = require('./src/controller/Authcontroller')
+const songController = require('./src/controller/SongController')
+const stockController = require('./src/controller/StockController')
 
 module.exports = (app) => {
     app.post('/register', authController.register)

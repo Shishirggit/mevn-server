@@ -11,16 +11,16 @@ app.use(bodyParser.json())
 app.use(cors())
 
 require('./routes')(app)
-require('./utils/mongoosedb')(app)
+require('./src/utils/mongoosedb')(app)
 
 
 var server = app.listen(process.env.PORT || 3000, () => {
   console.log("Listening ..", process.env.PORT);
 });
 
-require('./utils/socket/socketio')(server)
+require('./src/utils/socket/socketio')(server)
 app.get('/socketexample', function(req, res){
-  res.sendFile(__dirname + '/utils/socket/socket-example.html');
+  res.sendFile(__dirname + '/src/utils/socket/socket-example.html');
 });
 
 
