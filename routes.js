@@ -1,4 +1,4 @@
-const authController = require('./src/controller/Authcontroller')
+const authController = require('./src/controller/AuthController')
 const songController = require('./src/controller/SongController')
 const stockController = require('./src/controller/StockController')
 
