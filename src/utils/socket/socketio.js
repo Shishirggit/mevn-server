@@ -9,7 +9,7 @@ module.exports = (http) => {
     var interval = setInterval(() => {
         memcache.cache(startTime)
         eventEmitter.emit('change');
-    }, 3600000)
+    }, 240000)
 
     io.on('connection', function(socket){
         
